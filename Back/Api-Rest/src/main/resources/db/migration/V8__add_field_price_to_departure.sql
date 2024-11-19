@@ -1,1 +1,0 @@
-ALTER TABLE departure ADD COLUMN price DOUBLE;
