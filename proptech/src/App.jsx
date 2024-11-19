@@ -18,7 +18,6 @@ function App() {
       <Route path="/pagos" element={<PaymentAdminMortgageCalculator/>}/>
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
-      
       <Route path="*" element={<ErrorPage />} />
     </Routes>
   );
