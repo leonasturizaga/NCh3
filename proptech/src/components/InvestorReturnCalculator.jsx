@@ -103,17 +103,17 @@ function InvestorReturnCalculator() {
     };
 
     return (
-        <div className="max-w-md mx-auto p-6 bg-inherit border-2 border-secondary shadow-md rounded-xl focus-within:shadow-primary">
-            <h2 className="text-2xl font-bold mb-4 text-center text-text-primary">Calculá tu ganancia</h2>
-            <div className="space-y-4 ">
-                <div>
+        <div className="min-w-[40vw] p-6 bg-inherit border-2 border-secondary shadow-md rounded-xl focus-within:shadow-primary">
+            <h2 className="text-2xl font-bold mb-4 text-center text-text-primary w-full">Calculá tu ganancia</h2>
+            <div className="space-y-4">
+                <div className="space-y-4">
                     <label className="font-bold text-text-primary mb-1">Capital</label>
                     <p
                         className={`text-sm mt-1 ${errors.principal === true
-                            ? "text-text-messageError"
+                            ? "p-messageError"
                             : errors.principal === false && focus.principal
-                                ? "text-text-message"
-                                : "hidden"
+                                ? "p-messageOk"
+                                : "p-message"
                             }`}
                     >
                         Capital a solicitar en pesos.
@@ -132,10 +132,10 @@ function InvestorReturnCalculator() {
                     <label className='font-bold text-text-primary mb-1'>Tasa de Interes anual</label>
                     <p
                         className={`text-sm mt-1 ${errors.annualRate === true
-                            ? "text-text-messageError"
+                            ? "p-messageError"
                             : focus.annualRate && errors.annualRate === false
-                                ? "text-text-message"
-                                : "hidden"
+                                ? "p-messageOk"
+                                : "p-message"
                             }`}
                     >
                         Tasa de interes expresada en (%)
@@ -154,14 +154,14 @@ function InvestorReturnCalculator() {
                     <label className='font-bold text-text-primary mb-1'>Plazo en {termType === 'years' ? "años" : "meses"}</label>
                             <p
                                 className={`text-sm mt-1 ${errors.term === true
-                                    ? "text-text-messageError"
+                                    ? "p-messageError"
                                     : focus.term && errors.term === false
-                                        ? "text-text-message"
-                                        : "hidden"
+                                        ? "p-messageOk"
+                                        : "p-message"
                                     }`}
                             > Elija plazo en años o meses
                             </p>
-                    <div className='flex space-x-4'>
+                    <div className='space-y-2'>
                         <div>
                             <input
                                 type="number"
@@ -174,7 +174,7 @@ function InvestorReturnCalculator() {
                             />
                         </div>
 
-                        <div className="items-center ">
+                        <div className="justify-end items-center flex space-x-2">
                             <label className="flex items-center">
                                 <input
                                     type="checkbox"
@@ -251,6 +251,7 @@ function InvestorReturnCalculator() {
                     </table>
                 </div>
             )}
+
         </div>
     );
 }
