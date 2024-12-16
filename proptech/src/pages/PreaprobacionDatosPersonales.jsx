@@ -66,6 +66,7 @@ function PreaprobacionDatosPersonales() {
     } catch (error) {
       console.error("Error al enviar los archivos:", error);
     }
+    navigate("/preaprobacionDatosServicios");
   }
   
   return (

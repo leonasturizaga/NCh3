@@ -51,6 +51,7 @@ function PreaprobacionDatosServicios() {
     } catch (error) {
       console.error("Error al enviar los archivos:", error);
     }
+    navigate("/preaprobacionGarante");
   };
 
   return (

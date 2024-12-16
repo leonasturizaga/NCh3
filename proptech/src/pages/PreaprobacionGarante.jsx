@@ -35,6 +35,7 @@ function PreaprobacionGarante() {
     } catch (error) {
       console.error("Error al enviar los datos:", error);
     }
+    navigate("/preaprobacionGaranteDatos");
   };
 
   return (
